@@ -1,0 +1,13 @@
+<%- include('partials/header') -%>
+
+    <h1>HOME</h1>
+    <p> <%= homeStartingContent %></p>
+    <p><%= datasArray %></p>
+ <% datasArray.forEach(function(data){ %>
+  <h1><%= data.type1 %></h1> 
+  <p><%= data.type2.substring(0,100) + "...." %>
+<a href="/posts/<%= data.type1 %>">Read More</a></p> 
+  <% }) %>
+ 
+  
+<%- include('partials/footer') -%>
